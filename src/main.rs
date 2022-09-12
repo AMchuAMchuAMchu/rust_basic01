@@ -9,9 +9,15 @@
 
 fn main() {
 
-    let x = String::new();
-    let y = x;
-    println!("{},{}",x,y);
+    // let x = String::new();
+    // let y = x;
+    // println!("{},{}",x,y);
+
+    let str01 = String::from("Hello");
+
+    let str02 = str01;
+
+    println!("{}-{}",str01,str02);
 
 
 
