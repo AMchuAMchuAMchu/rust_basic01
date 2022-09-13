@@ -2,24 +2,22 @@
 *Description==>TODO  
 *BelongsProject==>rust_basic01  
 *BelongsPackage==>  
-*CreateTime==>2022-09-12 10:37:34  
+*CreateTime==>2022-09-13 20:13:35  
 *Version==>1.0  
 *Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start  
 */
 
-fn main() {
+fn main(){
 
-    // let x = String::new();
-    // let y = x;
-    // println!("{},{}",x,y);
+    let str01 = String::from("EGOIST&Emilico");
 
-    let str01 = String::from("Hello");
+    let (str02,str01_length) = m01(str01);
 
-    let str02 = str01;
+    println!("value:{},length:{}",str02,str01_length);
 
-    println!("{}-{}",str01,str02);
+}
 
-
-
-
+fn m01(str01 :String)->(String,usize){
+    let str01_length = str01.len();
+    return (str01,str01_length);
 }
