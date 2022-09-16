@@ -2,33 +2,29 @@
 *Description==>TODO  
 *BelongsProject==>rust_basic01  
 *BelongsPackage==>  
-*CreateTime==>2022-09-16 14:56:00  
+*CreateTime==>2022-09-16 14:45:02  
 *Version==>1.0  
 *Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start  
 */
 
-fn main(){
+fn main() {
 
-    let str01 = String::from("EGOIST&supercell");
+    let mut str01 = String::from("Hello Rust !!");
 
-    let s1 = &str01[..5];
+    let world_length = first_world(&str01);
 
-    let s2 = &str01[6..7];
-
-    let s3 = &str01[6..];
-
-    println!("{}🎃\n{}🥳\n{}",s1,s2,s3);
-
-
-
-
-
-
-
+    println!(" >> {}",world_length);
 }
 
+fn first_world(str01:&String)->&str {
 
+    let bytes = str01.as_bytes();
 
+    for (i,&item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &str01[..i];
+        }
+    }
 
-
-
+    return &str01[..];
+}
