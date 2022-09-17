@@ -11,20 +11,22 @@ fn main() {
 
     let mut str01 = String::from("Hello Rust !!");
 
+
     let world_length = first_world(&str01);
+
 
     println!(" >> {}",world_length);
 }
 
-fn first_world(str01:&String)->usize {
+fn first_world(str01:&str)->&str {
 
     let bytes = str01.as_bytes();
 
-    for (i,&item01) in bytes.iter().enumerate() {
-        if item01 == b' ' {
-            return i;
+    for (i,&item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &str01[..i];
         }
     }
 
-    return str01.len();
+    return &str01[..];
 }

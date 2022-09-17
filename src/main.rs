@@ -2,29 +2,29 @@
 *Description==>TODO  
 *BelongsProject==>rust_basic01  
 *BelongsPackage==>  
-*CreateTime==>2022-09-16 14:45:02  
+*CreateTime==>2022-09-17 20:47:00  
 *Version==>1.0  
 *Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start  
 */
 
 fn main() {
+    struct anime {
+        animeName: String,
+        character01:String,
+        character02:String,
+        time:i32,
+    };
 
-    let mut str01 = String::from("Hello Rust !!");
+    let shadow_house = anime{
+        animeName:String::from("影宅"),
+        character01:String::from("艾米丽可"),
+        character02:String::from("凯特"),
+        time:2020
+    };
 
-    let world_length = first_world(&str01);
 
-    println!(" >> {}",world_length);
-}
 
-fn first_world(str01:&String)->&str {
 
-    let bytes = str01.as_bytes();
 
-    for (i,&item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return &str01[..i];
-        }
-    }
 
-    return &str01[..];
 }
