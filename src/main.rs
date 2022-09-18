@@ -44,6 +44,9 @@ fn main() {
 
 
 
+
+
+
 }
 
 fn anime02(animeName :String,time:i32)->anime{
