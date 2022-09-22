@@ -18,9 +18,19 @@ fn main(){
 
     let a6 = IPADDR::v6;
 
-    route(a4)
+    route(a4);
 
 
+    let id04 = IPADDRDetail::v4(127,0,0,0);
+
+    let id06 = IPADDRDetail::v6(String::from("呵呵O(∩_∩)O~"));
+
+
+}
+
+enum IPADDRDetail {
+    v4(u32,u32,u32,u32),
+    v6(String),
 }
 
 fn route(ap:IPADDR){
