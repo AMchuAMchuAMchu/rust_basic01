@@ -2,36 +2,30 @@
 *Description==>TODO  
 *BelongsProject==>rust_basic01  
 *BelongsPackage==>  
-*CreateTime==>2022-09-21 17:08:26  
+*CreateTime==>2022-09-22 08:14:22  
 *Version==>1.0  
 *Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start  
 */
-#[derive(Debug)]
 
-
-
-struct Anime{
-    animeName:i32,
-    time:i32
-}
-
-impl Anime {
-    fn sayHello(&self)->i32{
-        return self.animeName+self.time;
-    }
+enum IPADDR{
+    v4,
+    v6,
 }
 
 fn main(){
 
-    let a01 = Anime{
-        animeName:36,
-        time:2022,
-    };
+    let a4 = IPADDR::v4;
 
-    println!("01 {}",a01.sayHello());
+    let a6 = IPADDR::v6;
 
-    println!("02 {:#?}",a01);
+    route(a4)
+
 
 }
+
+fn route(ap:IPADDR){
+
+}
+
 
 
